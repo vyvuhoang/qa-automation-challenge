@@ -67,7 +67,19 @@ use: {
 
 ## Running Tests
 
-### UI Tests
+---
+### Run tests using Docker
+1. Build Docker image using Dockerfile
+```bash
+docker build -t qa-automation-challenge .
+```
+
+2. Execute tests using Docker
+```bash
+docker run --rm qa-automation-challenge
+```
+
+### Runnung Tests Locally
 
 - **Run all UI tests**  
   ```bash
