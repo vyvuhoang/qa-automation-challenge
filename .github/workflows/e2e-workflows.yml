@@ -1,10 +1,5 @@
 name: E2E Tests
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 on:
   push:
     branches: [ main ]
@@ -13,21 +8,10 @@ on:
 
 jobs:
   login:
-    name: Login Tests
     runs-on: ubuntu-latest
     timeout-minutes: 30
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Cache Playwright Browsers
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-browser-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-playwright-browser-
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -50,25 +34,14 @@ jobs:
         with:
           name: login-report
           path: playwright-report
-          retention-days: 10
+          retention-days: 1
 
   search:
-    name: Search Tests
     needs: login
     runs-on: ubuntu-latest
     timeout-minutes: 30
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Cache Playwright Browsers
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-browser-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-playwright-browser-
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -91,4 +64,4 @@ jobs:
         with:
           name: search-report
           path: playwright-report
-          retention-days: 10
+          retention-days: 1
