@@ -4,4 +4,4 @@ services:
     volumes:
       - .:/app:cached
     working_dir: /app
-    command: npx playwright test --workers=4 --reporter=html
+    command: npx playwright test --reporter=html
