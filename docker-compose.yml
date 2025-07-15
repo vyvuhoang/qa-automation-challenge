@@ -1,0 +1,7 @@
+services:
+  tests:
+    image: qa-automation-challenge
+    volumes:
+      - .:/app:cached
+    working_dir: /app
+    command: npx playwright test --reporter=html

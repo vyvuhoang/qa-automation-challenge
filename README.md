@@ -37,7 +37,7 @@ qa-automation-challenge/
 ---
 1. **Clone the repo**  
    ```bash
-   git clone git@github.com:<your-username>/qa-automation-challenge.git
+   git clone git@github.com:vyvuhoang/qa-automation-challenge.git
    cd qa-automation-challenge
    ```
 
@@ -74,9 +74,9 @@ use: {
 docker build -t qa-automation-challenge .
 ```
 
-2. Execute tests using Docker
+2. Execute tests using docker-compose
 ```bash
-docker run --rm qa-automation-challenge
+docker-compose run --rm tests
 ```
 
 ### Runnung Tests Locally
