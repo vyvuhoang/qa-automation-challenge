@@ -37,7 +37,7 @@ qa-automation-challenge/
 ---
 1. **Clone the repo**  
    ```bash
-   git clone git@github.com:<your-username>/qa-automation-challenge.git
+   git clone git@github.com:vyvuhoang/qa-automation-challenge.git
    cd qa-automation-challenge
    ```
 
