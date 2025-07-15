@@ -74,9 +74,9 @@ use: {
 docker build -t qa-automation-challenge .
 ```
 
-2. Execute tests using Docker
+2. Execute tests using docker-compose
 ```bash
-docker run --rm qa-automation-challenge
+docker-compose run --rm tests
 ```
 
 ### Runnung Tests Locally
