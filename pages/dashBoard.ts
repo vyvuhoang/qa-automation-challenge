@@ -19,7 +19,6 @@ export class SideBarSearch {
      */
     async search(keyword: string) {
         await this.searchInput.fill(keyword);
-        // the filtering happens automatically as you type
     }
 
     /**

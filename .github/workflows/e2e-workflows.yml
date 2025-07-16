@@ -34,7 +34,7 @@ jobs:
         with:
           name: login-report
           path: playwright-report
-          retention-days: 1
+          retention-days: 30
 
   search:
     needs: login
@@ -64,4 +64,4 @@ jobs:
         with:
           name: search-report
           path: playwright-report
-          retention-days: 1
+          retention-days: 30
