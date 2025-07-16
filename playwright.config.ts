@@ -16,9 +16,10 @@ export default defineConfig({
   use: {
     /* Base URL */
     baseURL: 'https://opensource-demo.orangehrmlive.com',
-
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    /* Specific US locale  */
+    locale: 'en-US',
   },
 
   /* Configure projects for major browsers */
